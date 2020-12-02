@@ -35,7 +35,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 void response(query) async{
   AuthGoogle authGoogle= await AuthGoogle(
-    fileJson: "assets/botfile.json"
+    fileJson: //HERE COMES THE JSON FILE
   ).build();
   Dialogflow dialogflow = Dialogflow(authGoogle: authGoogle, language: Language.english);
   AIResponse aiResponse = await dialogflow.detectIntent(query);
